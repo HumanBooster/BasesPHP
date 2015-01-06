@@ -8,24 +8,32 @@
 	<body><p>
 		<?php
 
-	$tab_int = array(1, 4, 5, 6, 8);
-	$tab_strings = array("Michel", "Paul", "Didier");
-
-	echo $tab_strings[1];
-
-	$tab_strings[] = "Jeremy";
+	$tab_personnes = array(
+			array("Michel", 44),
+			array("Paul", 32),
+			array("Marie", 50)
+		);
 
 
 	echo '<pre>';
-	print_r($tab_strings);
+	print_r($tab_personnes);
 	echo '</pre>';
 ?>
 <ul>
 <?php
-	$longueur = sizeof($tab_strings);
+	$longueur = sizeof($tab_personnes);
 
 	for ($i=0; $i<$longueur; $i++) {
-		echo '<li>'.$tab_strings[$i].'</li>';
+		/*echo '<li>'.$tab_personnes[$i][0]." a "
+			.$tab_personnes[$i][1].' ans</li>';*/
+
+		echo '<li>';
+
+		for ($j=0; $j<sizeof($tab_personnes[$i]); $j++) {
+			echo "[".$tab_personnes[$i][$j]."]";
+		}
+
+		echo '</li>';
 	}
 
 	?>
