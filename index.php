@@ -1,3 +1,7 @@
+<?php 
+	// initialisation du prenom
+	$prenom = "Benjamin";
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -9,7 +13,9 @@
 		<h1>Ma page web</h1>
 
 		<p>
-			Bonjour Benjamin !
+			Bonjour <?php 
+			echo $prenom; 
+			?> !
 		</p>
 
 	</body>
