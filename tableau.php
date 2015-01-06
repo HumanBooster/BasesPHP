@@ -9,9 +9,12 @@
 		<?php
 
 	$tab_personnes = array(
-			array("Michel", 44),
-			array("Paul", 32),
-			array("Marie", 50)
+			array(  "prenom" => "Michel",
+					"age" => 44),
+			array(  "prenom" => "Paul",
+					"age" => 32),
+			array(  "prenom" => "Marie",
+					"age" => 50)
 		);
 
 
@@ -24,16 +27,16 @@
 	$longueur = sizeof($tab_personnes);
 
 	for ($i=0; $i<$longueur; $i++) {
-		/*echo '<li>'.$tab_personnes[$i][0]." a "
-			.$tab_personnes[$i][1].' ans</li>';*/
+		echo '<li>'.$tab_personnes[$i]["prenom"]." a "
+			.$tab_personnes[$i]["age"].' ans</li>';
 
-		echo '<li>';
+		/*echo '<li>';
 
 		for ($j=0; $j<sizeof($tab_personnes[$i]); $j++) {
 			echo "[".$tab_personnes[$i][$j]."]";
 		}
 
-		echo '</li>';
+		echo '</li>';*/
 	}
 
 	?>
