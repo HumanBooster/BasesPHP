@@ -21,6 +21,22 @@
 		);
 
 
+	// tableau de 10 * 5
+	$largeur = 5;
+	$hauteur = 10;
+
+	//$tab = array(); // facultatif
+
+	for ($j = 0; $j<$hauteur; $j++) {
+		for ($i = 0; $i<$largeur; $i++) {
+			$tab[$i + $j*$largeur] = "$i,$j";
+		}
+	}
+
+
+	print_r($tab);
+
+
 	echo '<pre>';
 	print_r($tab_personnes);
 	echo '</pre>';
@@ -32,9 +48,9 @@
 	foreach ($tab_personnes as $personne) {
 
 		echo '<li><ul>';
-			foreach ($personne as $valeur) {
+			foreach ($personne as $cle => $valeur) {
 
-				echo '<li>'.$valeur.'</li>';
+				echo '<li>'.$cle." : ".$valeur.'</li>';
 			}
 		echo '</ul></li>';
 	}

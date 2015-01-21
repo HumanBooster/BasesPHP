@@ -8,6 +8,7 @@
 
 	$r = multiplier(5, 3);
 
+
 	function direBonjour($prenom) {
 		echo "Bonjour $prenom !";
 	}
@@ -102,7 +103,7 @@
 		<p> 
 			<?php
 			//exemple date();
-			$date = date('Le d/m/Y à h:i');
+			$date = date('d/m/Y');
 			echo "La date est : ".$date."<br/>";
 		
 			?>
